@@ -52,15 +52,15 @@ export default defineConfig({
           },
         }),
 
-    // File storage (new module system)
+    // File storage (S3/MinIO)
     ...(isProd
       ? {
           [Modules.FILE]: {
-            resolve: "@medusajs/modules-file",
+            resolve: "@medusajs/medusa/file",
             options: {
               providers: [
                 {
-                  resolve: "@medusajs/modules-file-s3",
+                  resolve: "@medusajs/medusa/file-s3",
                   id: "s3",
                   options: {
                     file_url: process.env.S3_FILE_URL,
@@ -81,7 +81,7 @@ export default defineConfig({
         }
       : {}),
 
-    // Search (Meili)
+    // Search (MeiliSearch)
     ...(isProd
       ? {
           ["search"]: {
