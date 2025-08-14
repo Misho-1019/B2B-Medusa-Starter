@@ -19,6 +19,26 @@ export default defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
   },
+
+  // ✅ Register MeiliSearch plugin for v2
+  plugins: [
+    ...(isProd
+      ? [
+          {
+            resolve: "@rokmohar/medusa-plugin-meilisearch",
+            options: {
+              config: {
+                host: process.env.MEILI_HOST,
+                apiKey: process.env.MEILI_MASTER_KEY,
+              },
+              // You can add settings/index configs here if needed
+              prefix: "",
+            },
+          },
+        ]
+      : []),
+  ],
+
   modules: {
     [COMPANY_MODULE]: { resolve: "./modules/company" },
     [QUOTE_MODULE]: { resolve: "./modules/quote" },
@@ -76,19 +96,6 @@ export default defineConfig({
                   },
                 },
               ],
-            },
-          },
-        }
-      : {}),
-
-    // Search (MeiliSearch)
-    ...(isProd
-      ? {
-          ["search"]: {
-            resolve: "@medusajs/medusa/search-meilisearch",
-            options: {
-              host: process.env.MEILI_HOST,
-              api_key: process.env.MEILI_MASTER_KEY,
             },
           },
         }

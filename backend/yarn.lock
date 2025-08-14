@@ -6495,6 +6495,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rokmohar/medusa-plugin-meilisearch@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "@rokmohar/medusa-plugin-meilisearch@npm:1.2.3"
+  dependencies:
+    meilisearch: "npm:^0.51.0"
+  peerDependencies:
+    "@medusajs/admin-sdk": ^2.8.4
+    "@medusajs/cli": ^2.8.4
+    "@medusajs/framework": ^2.8.4
+    "@medusajs/icons": ^2.8.4
+    "@medusajs/medusa": ^2.8.4
+    "@medusajs/test-utils": ^2.8.4
+    "@medusajs/ui": ^4.0.3
+    "@mikro-orm/cli": 6.4.3
+    "@mikro-orm/core": 6.4.3
+    "@mikro-orm/knex": 6.4.3
+    "@mikro-orm/migrations": 6.4.3
+    "@mikro-orm/postgresql": 6.4.3
+    "@tanstack/react-query": 5.64.2
+    awilix: ^8.0.1
+    pg: ^8.13.0
+  checksum: 10c0/647d362511e1934247d2b51533a18b829f45298861522b251b774644699080067a5cda7e42a5df02f56be4b96b8499ea42b5ee838806b5c0ea1c805ddb48b366
+  languageName: node
+  linkType: hard
+
 "@rolldown/pluginutils@npm:1.0.0-beta.11":
   version: 1.0.0-beta.11
   resolution: "@rolldown/pluginutils@npm:1.0.0-beta.11"
@@ -12134,6 +12159,7 @@ __metadata:
     "@mikro-orm/knex": "npm:6.4.3"
     "@mikro-orm/migrations": "npm:6.4.3"
     "@mikro-orm/postgresql": "npm:6.4.3"
+    "@rokmohar/medusa-plugin-meilisearch": "npm:^1.2.3"
     "@swc/core": "npm:^1.5.7"
     "@swc/jest": "npm:^0.2.36"
     "@types/jest": "npm:^29.5.14"
@@ -12152,6 +12178,13 @@ __metadata:
     zod: "npm:3.22.4"
   languageName: unknown
   linkType: soft
+
+"meilisearch@npm:^0.51.0":
+  version: 0.51.0
+  resolution: "meilisearch@npm:0.51.0"
+  checksum: 10c0/41a13c2a98af9757c8f512d2a96b03e5869631e799e8c81cfc822f94b3717c021da85799c3cc9bc8b3fa1bb25c4ce752efc660fd5724ab404c30841ec81ebdd4
+  languageName: node
+  linkType: hard
 
 "merge-descriptors@npm:1.0.3":
   version: 1.0.3
